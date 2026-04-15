@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Work, Cole Perkins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container--wide">
+      <a href="index.html" class="site-name">Cole Perkins</a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html" class="active">Work</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="portfolio.html">Work</a> &nbsp;/&nbsp; Curriculum</p>
+        <p class="subtitle">Curriculum Work</p>
+        <h1>Curriculum Design</h1>
+        <p class="lede">Units, systems, and classroom infrastructure I've designed to make CS learning hands-on, modular, and meaningful across grades 6–8.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="project-block">
+          <h2>Modular VEX Robotics System</h2>
+          <p class="meta">Grades 6–8 &middot; Hardware + Curriculum</p>
+          <p>When I inherited the CS program I had 30 sections a year cycling through robotics with limited kits, limited time, and students of very different experience levels. I designed a modular VEX system from scratch, standardized base robots with swappable sensor and mechanism modules, that lets a class of 24 get up and running in a single period instead of burning a week on rebuilds.</p>
+          <p>The accompanying curriculum scaffolds students from sensor basics through autonomous navigation, with challenge-based assessments (mazes, line-following, and timed tasks) that accommodate a wide range of skill levels within the same lesson. It's the kind of system design I find most rewarding, where pedagogy, materials management, and student experience have to all solve the same problem at once.</p>
+          <div>
+            <span class="tag">VEX</span>
+            <span class="tag">Robotics</span>
+            <span class="tag">Modular Design</span>
+            <span class="tag">Systems Thinking</span>
+            <span class="tag">Curriculum</span>
+          </div>
+          <div class="media-row">
+            <img src="images/classroom-robotics.jpg" alt="Students working with VEX robots">
+            <img src="images/classroom-maze.jpg" alt="Robot navigating a wooden maze">
+            <img src="images/classroom-supplies.jpg" alt="Organized shelves of VEX kits and supplies">
+            <img src="images/vex-maze-1.jpg" alt="Modular VEX maze with ramps and wooden walls">
+            <img src="images/vex-maze-2.jpg" alt="VEX field configured as a complex navigation course">
+          </div>
+          <div class="media-row">
+            <video controls preload="metadata" poster="images/vex-maze-1.jpg">
+              <source src="images/vex-demo.mov" type="video/quicktime">
+              Your browser doesn't support embedded video.
+            </video>
+            <video controls preload="metadata" poster="images/vex-maze-2.jpg">
+              <source src="images/vex-demo-2.mov" type="video/quicktime">
+              Your browser doesn't support embedded video.
+            </video>
+          </div>
+        </div>
+
+        <div class="project-block">
+          <h2>Creative Computing</h2>
+          <p class="meta">p5.js &middot; Generative Art &middot; Expression</p>
+          <p>A unit built around p5.js that treats code as a medium for personal expression. Students start with drawing primitives, progress through animation and interactivity, and finish with a generative self-portrait or response to a prompt of their choosing. The Care Garden installation grew directly out of this unit, once students experienced making things with code, they started asking what else we could build for the school.</p>
+          <p>The through-line: <em>code is a language, and every language is worth learning if you have something to say.</em></p>
+          <div>
+            <span class="tag">p5.js</span>
+            <span class="tag">Creative Coding</span>
+            <span class="tag">Self-Expression</span>
+            <span class="tag">Middle School</span>
+          </div>
+        </div>
+
+        <div class="project-block">
+          <h2>AI &amp; Ethics Curriculum</h2>
+          <p class="meta">Responsible AI &middot; Critical Thinking</p>
+          <p>A unit I developed to help 6–8 graders engage critically with the AI tools already in their lives. Students investigate algorithmic bias through real case studies, build their own tiny classifiers to see how training data shapes outputs, and develop a personal rubric for evaluating when and how to use AI. We end with a class debate on a contested use case chosen by the students.</p>
+          <p>The goal isn't to make students AI enthusiasts or AI skeptics, it's to give them the vocabulary and confidence to make their own informed choices.</p>
+          <div>
+            <span class="tag">AI Literacy</span>
+            <span class="tag">Ethics</span>
+            <span class="tag">Critical Thinking</span>
+            <span class="tag">Digital Citizenship</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Cole Perkins. Built by hand.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

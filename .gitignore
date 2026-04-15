@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Large video files (over GitHub 100MB limit)
+images/care-garden-1.mp4
+
+# Claude Code
+.claude/
+
+# Editor files
+*.swp
+*~

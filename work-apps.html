@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apps, Cole Perkins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container--wide">
+      <a href="index.html" class="site-name">Cole Perkins</a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html" class="active">Work</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="portfolio.html">Work</a> &nbsp;/&nbsp; Apps</p>
+        <p class="subtitle">Apps</p>
+        <h1>Web Apps</h1>
+        <p class="lede">Tools I've built to support teaching and school operations, all live, all in daily use.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="project-block">
+          <h2>Rams Care Data Dashboard</h2>
+          <p class="meta">Streamlit &middot; Python &middot; Data Viz <span class="status">Live</span></p>
+          <p>A data dashboard that turns our PBIS survey data into something staff can actually use. Teachers and administrators can slice by grade, section, time period, and question to see how students are experiencing school, and where targeted support might help. Built with Streamlit because fast iteration matters more than polish when you're the only developer.</p>
+          <p>The "Student Insights" view is the one that gets used most, it surfaces individual response patterns that often get buried in aggregate reports.</p>
+          <div>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Python</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">PBIS</span>
+            <span class="tag">Staff Tooling</span>
+          </div>
+          <div class="links">
+            <a href="https://rams-pbis-data-explorer.streamlit.app/Student_Insights" target="_blank" rel="noopener">Open Dashboard &rarr;</a>
+          </div>
+          <iframe
+            class="app-preview"
+            src="https://rams-pbis-data-explorer.streamlit.app/Student_Insights"
+            title="Rams Care Data Explorer"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="project-block">
+          <h2>Unified Arts Website</h2>
+          <p class="meta">Web Design &middot; Google Classroom Integration <span class="status">Live</span></p>
+          <p>A redesigned website for the Unified Arts team at Robert Adams, art, music, PE, health, and computer science all under one roof. The previous site was hard to navigate and disconnected from the tools teachers and students actually use day-to-day. The rebuild integrates directly with Google Classroom so homework, announcements, and resources flow into one clean interface for families and students.</p>
+          <p>The design goal was "feels like a real website, not a school website", calm layout, clear typography, and a homepage that gives equal footing to every discipline.</p>
+          <div>
+            <span class="tag">Web Design</span>
+            <span class="tag">Google Classroom API</span>
+            <span class="tag">Info Architecture</span>
+            <span class="tag">Families</span>
+          </div>
+          <div class="links">
+            <a href="https://rams-unified-arts.netlify.app" target="_blank" rel="noopener">Visit Site &rarr;</a>
+          </div>
+          <iframe
+            class="app-preview"
+            src="https://rams-unified-arts.netlify.app"
+            title="Rams Unified Arts website"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="project-block">
+          <h2>Curriculum Platform</h2>
+          <p class="meta">Web App &middot; Teacher Tooling <span class="status in-progress">In Progress</span></p>
+          <p>An internal tool I'm building to manage and share the curriculum I've developed, units, pacing guides, activities, and reusable assessment components. The goal is to make it easy for another teacher (at my school or anywhere) to pick up a unit and run it, with all the scaffolding intact. Currently a work in progress; happy to walk through the architecture and design thinking with anyone interested.</p>
+          <div>
+            <span class="tag">Web App</span>
+            <span class="tag">Teacher Tools</span>
+            <span class="tag">Curriculum</span>
+            <span class="tag">In Development</span>
+          </div>
+        </div>
+
+        <div class="project-block" id="rams-heartbeat">
+          <h2>RAMS Heartbeat</h2>
+          <p class="meta">React &middot; School Operations <span class="status in-progress">In Progress</span></p>
+          <p>An all-in-one platform designed to keep Robert Adams running smoothly by giving staff, students, and administrators a single place to find what they need. Instead of bouncing between disconnected tools and spreadsheets, Heartbeat brings everything into one clean interface built around each user's role.</p>
+          <p>The staff dashboard surfaces schedules, announcements, and day-to-day logistics so teachers can focus on teaching. The student portal gives kids access to their resources, assignments, and school news in a layout they can actually navigate. Admin tools handle the school-wide view, reports, data, and operational details that keep things organized behind the scenes. A shared communication hub ties it all together with notifications, messaging, and a live news feed so nothing falls through the cracks.</p>
+          <p>Built in React because the interface needs to feel responsive and fast for users who are checking it between classes, not sitting at a desk. Currently in active development.</p>
+          <div>
+            <span class="tag">React</span>
+            <span class="tag">Staff Dashboard</span>
+            <span class="tag">Student Portal</span>
+            <span class="tag">Admin Tools</span>
+            <span class="tag">Communication</span>
+            <span class="tag">School Ops</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Cole Perkins. Built by hand.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

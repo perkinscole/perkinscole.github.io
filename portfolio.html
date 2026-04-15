@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work, Cole Perkins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container--wide">
+      <a href="index.html" class="site-name">Cole Perkins</a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html" class="active">Work</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="subtitle">Work</p>
+        <h1>Selected Projects</h1>
+        <p class="lede">Curriculum, apps, installations, and student-facing tools built at the intersection of education, design, and code.</p>
+      </div>
+    </section>
+
+    <!-- ── Featured: Care Garden ── -->
+    <section>
+      <div class="container">
+        <p class="subtitle">Featured</p>
+        <h2>Care Garden, An Interactive PBIS Installation</h2>
+        <p style="margin-top:.8rem;">
+          Before becoming a teacher I spent time with creative computing communities in p5.js and Processing, so when I took over the computer science program at Robert Adams I wanted my students to experience what it feels like to use code to make something expressive and social, not just functional. We spent a unit on creative coding in p5 building generative sketches, and it became the foundation for <strong>Care Garden</strong>.
+        </p>
+        <p>
+          Care Garden is a live, generative art installation I built in p5.js and staged in our school lobby during a week of PBIS programming. Students contributed small acts of kindness through a simple input on a kiosk, and each contribution bloomed as a unique flower in a shared digital garden on the display. Over the course of the week, thousands of entries streamed in, we watched the garden fill up with student-generated expressions of care, and the display became a gathering place in the lobby where kids would stop, point at their flower, and pull friends over to add their own.
+        </p>
+
+        <div class="pull-quote">
+          Seeing the thousands of smiles shared over the course of that week was really amazing. It reminded me why I love this work, code as an excuse to gather people around something kind.
+        </div>
+
+        <div style="margin-top:1rem;">
+          <span class="tag">p5.js</span>
+          <span class="tag">Creative Coding</span>
+          <span class="tag">PBIS</span>
+          <span class="tag">Interactive Installation</span>
+          <span class="tag">Community</span>
+        </div>
+
+        <div class="links">
+          <a href="https://github.com/perkinscole" target="_blank" rel="noopener">Care Garden on GitHub &rarr;</a>
+          <a href="https://editor.p5js.org/RAMS2023Teacher/full/CWu-kavOR" target="_blank" rel="noopener">Original p5 Sketch &rarr;</a>
+        </div>
+
+        <!-- live sketch -->
+        <div style="margin-top:2rem;">
+          <iframe
+            class="embed-frame"
+            src="https://editor.p5js.org/RAMS2023Teacher/full/CWu-kavOR"
+            title="Care Garden, interactive p5.js sketch"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+            loading="lazy"
+          ></iframe>
+          <p class="embed-caption">Original p5.js editor version of the sketch shown above. The current installation version runs from a local server and isn't a pure p5 sketch anymore, source is on <a href="https://github.com/perkinscole" target="_blank" rel="noopener">GitHub</a>.</p>
+        </div>
+
+        <!-- photos & video from the installation -->
+        <h3 style="margin-top:3rem;margin-bottom:.6rem;">From the Installation</h3>
+        <p style="font-size:.92rem;color:var(--text-light);">The lobby display in action and the community around it.</p>
+        <div class="media-row">
+          <figure>
+            <img src="images/care-garden-install.jpg" alt="Care Garden installation in progress">
+            <figcaption>making the installation</figcaption>
+          </figure>
+          <figure>
+            <img src="images/care-garden-group.jpg" alt="Cole with students posing by the Care Garden display">
+            <figcaption>the crew at the Care Garden display</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls preload="metadata" poster="images/care-garden-install.jpg">
+              <source src="images/care-garden-1.mp4" type="video/mp4">
+              Your browser doesn't support embedded video.
+            </video>
+            <figcaption>timelapse of morning 1</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Category hub ── -->
+    <section>
+      <div class="container">
+        <p class="subtitle">Browse by Category</p>
+        <h2>Explore the Work</h2>
+
+        <div class="category-grid">
+
+          <a class="category-card" href="work-student.html">
+            <h3>Student-Facing</h3>
+            <p>Tools and apps built for the students I teach, including Rams Care and Guess That Teacher.</p>
+            <span class="arrow">View &rarr;</span>
+          </a>
+
+          <a class="category-card" href="work-curriculum.html">
+            <h3>Curriculum</h3>
+            <p>Units and systems I designed, modular VEX robotics, creative computing, and AI &amp; ethics.</p>
+            <span class="arrow">View &rarr;</span>
+          </a>
+
+          <a class="category-card" href="work-apps.html">
+            <h3>Apps</h3>
+            <p>Web apps: a PBIS survey data dashboard, a redesigned Unified Arts site, and a curriculum platform in progress.</p>
+            <span class="arrow">View &rarr;</span>
+          </a>
+
+          <a class="category-card" href="work-special.html">
+            <h3>Special Projects</h3>
+            <p>Ongoing experiments: micro:bit v2 drones, multiplayer Scratch, and Remy, a Jetson-powered classroom robot.</p>
+            <span class="arrow">View &rarr;</span>
+          </a>
+
+          <a class="category-card" href="work-clubs.html">
+            <h3>Clubs</h3>
+            <p>Student clubs I lead, Computer Club and Camera Club, focused on exploration and creative expression.</p>
+            <span class="arrow">View &rarr;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Cole Perkins. Built by hand.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

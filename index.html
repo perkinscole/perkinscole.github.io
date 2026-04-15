@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cole Perkins, Educator, Designer, Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container--wide">
+      <a href="index.html" class="site-name">Cole Perkins</a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Work</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container" style="display:flex;align-items:center;gap:3.5rem;flex-wrap:wrap;">
+        <div class="hero-text">
+          <p class="subtitle">Educator &middot; Designer &middot; Developer</p>
+          <h1>Cole Perkins</h1>
+          <p class="tagline">Building learning experiences at the intersection of technology, design, and human connection.</p>
+          <p>I'm a middle school computer science teacher, former software developer, and lifelong learner interested in how people interact with technology and how thoughtful design can make education more engaging, equitable, and human. I'm seeking opportunities in instructional design, experience design, and educational technology.</p>
+          <div class="link-row">
+            <a href="portfolio.html">View My Work</a>
+            <a href="work-curriculum.html">Curriculum</a>
+            <a href="cv.html">Curriculum Vitae</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <!-- Replace with your headshot: save as images/headshot.jpg -->
+          <img src="images/headshot.jpg" alt="Cole Perkins headshot">
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Currently ── -->
+    <section>
+      <div class="container">
+        <p class="subtitle">Currently</p>
+        <h2 style="margin-top:.4rem;">What I'm Working On</h2>
+        <p style="margin-top:.8rem;max-width:640px;">A handful of active projects at the edges of my classroom practice, hardware, multiplayer code, and classroom robotics I'm building alongside my students.</p>
+
+        <div class="category-grid" style="margin-top:2rem;">
+
+          <a class="category-card" href="work-special.html#microbit-drones">
+            <h3>micro:bit v2 Drones</h3>
+            <p>A low-cost, block-codable drone platform built around the micro:bit v2, bringing aerial robotics into middle school.</p>
+            <span class="arrow">Explore &rarr;</span>
+          </a>
+
+          <a class="category-card" href="work-special.html#multiplayer-scratch">
+            <h3>Multiplayer Scratch</h3>
+            <p>Adding real-time multiplayer to Scratch so students can build games their classmates can join from other devices.</p>
+            <span class="arrow">Explore &rarr;</span>
+          </a>
+
+          <a class="category-card" href="work-special.html#microbit-scratch">
+            <h3>micro:bit &times; Scratch</h3>
+            <p>A live bridge letting Scratch projects read and write micro:bit v2 sensors, turning classroom hardware into game controllers.</p>
+            <span class="arrow">Explore &rarr;</span>
+          </a>
+
+          <a class="category-card" href="work-special.html#remy">
+            <h3>Remy the Robot</h3>
+            <p>A classroom robot on an NVIDIA Jetson Orin Nano, designed to be a shared character students can interact with, program, and extend.</p>
+            <span class="arrow">Explore &rarr;</span>
+          </a>
+
+          <a class="category-card" href="work-apps.html">
+            <h3>Curriculum Platform</h3>
+            <p>A web app in development for managing and sharing my CS curriculum so other teachers can pick up a unit and run it.</p>
+            <span class="arrow">Explore &rarr;</span>
+          </a>
+
+          <a class="category-card" href="portfolio.html">
+            <h3>Care Garden, Next Iteration</h3>
+            <p>Rebuilding the PBIS installation from a pure p5 sketch into a local-server app with richer data and display options.</p>
+            <span class="arrow">Explore &rarr;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Cole Perkins. Built by hand.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
