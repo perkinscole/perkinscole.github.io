@@ -19,31 +19,133 @@
       </button>
       <nav>
         <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Work</a>
-        <a href="cv.html">CV</a>
-        <a href="contact.html">Contact</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#experience">CV</a>
+        <a href="#contact">Contact</a>
+        <a href="portfolio.html">Full Portfolio</a>
       </nav>
     </div>
   </header>
 
   <main>
+
+    <!-- ── Hero ── -->
     <section class="hero">
       <div class="container" style="display:flex;align-items:center;gap:3.5rem;flex-wrap:wrap;">
         <div class="hero-text">
           <p class="subtitle">Educator &middot; Designer &middot; Developer</p>
           <h1>Cole Perkins</h1>
           <p class="tagline">Building learning experiences at the intersection of technology, design, and human connection.</p>
-          <p>I'm a middle school computer science teacher, former software developer, and lifelong learner interested in how people interact with technology and how thoughtful design can make education more engaging, equitable, and human. I'm seeking opportunities in instructional design, experience design, and educational technology.</p>
+          <p>Middle school computer science teacher and former software developer, looking to bring my blend of teaching, development, and design thinking to a role in instructional design, experience design, or educational technology.</p>
           <div class="link-row">
-            <a href="portfolio.html">View My Work</a>
-            <a href="work-curriculum.html">Curriculum</a>
-            <a href="cv.html">Curriculum Vitae</a>
+            <a href="#work">View Work</a>
+            <a href="#contact">Get in Touch</a>
+            <a href="cv.html">Full CV</a>
           </div>
         </div>
         <div class="hero-photo">
-          <!-- Replace with your headshot: save as images/headshot.jpg -->
           <img src="images/headshot.jpg" alt="Cole Perkins headshot">
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Featured Work ── -->
+    <section id="work">
+      <div class="container">
+        <p class="subtitle">Featured</p>
+        <h2 style="margin-top:.4rem;">Care Garden, An Interactive PBIS Installation</h2>
+        <p style="margin-top:.8rem;max-width:700px;">A live, generative art installation built in p5.js and staged in our school lobby during a week of PBIS programming. Students contributed acts of kindness through a kiosk, each one bloomed as a unique flower in a shared digital garden on a large display. Thousands of entries came in over five days, and the lobby became a gathering place. Code as an excuse to gather people around something kind.</p>
+
+        <div class="media-row" style="margin-top:1.5rem;">
+          <figure>
+            <img src="images/care-garden-group.jpg" alt="Cole with students by the Care Garden display">
+          </figure>
+          <figure>
+            <img src="images/care-garden-install.jpg" alt="Care Garden installation in progress">
+          </figure>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <span class="tag">p5.js</span>
+          <span class="tag">Creative Coding</span>
+          <span class="tag">PBIS</span>
+          <span class="tag">Interactive Installation</span>
+          <span class="tag">Community</span>
+        </div>
+
+        <div class="link-row" style="margin-top:1.4rem;">
+          <a href="portfolio.html">Care Garden Detail &rarr;</a>
+          <a href="https://github.com/perkinscole/care-garden" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Selected Projects ── -->
+    <section>
+      <div class="container">
+        <p class="subtitle">Selected Projects</p>
+        <h2 style="margin-top:.4rem;">A Closer Look</h2>
+        <p style="margin-top:.8rem;max-width:640px;">Curriculum, apps, and tools I've built for the students and staff at Robert Adams Middle School and beyond.</p>
+
+        <div class="project-grid" style="margin-top:2.5rem;">
+
+          <a class="project-card" href="work-curriculum.html" style="text-decoration:none;color:inherit;">
+            <img src="images/vex-maze-1.jpg" alt="Modular VEX maze with ramps" class="project-card-img">
+            <div class="project-card-body">
+              <h3>Modular VEX Robotics System</h3>
+              <p>A standardized base-robot system with swappable sensor modules, designed to get a class of 24 up and running in a single period. Includes the curriculum that scaffolds students from sensors through autonomous navigation.</p>
+              <div style="margin-top:.4rem;">
+                <span class="tag">Robotics</span>
+                <span class="tag">Curriculum</span>
+                <span class="tag">Systems Design</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card" href="work-apps.html#rams-heartbeat" style="text-decoration:none;color:inherit;">
+            <div class="project-card-img" style="display:flex;align-items:center;justify-content:center;background:var(--bg-alt);font-family:var(--serif);font-size:1.8rem;color:var(--accent);font-style:italic;">Heartbeat</div>
+            <div class="project-card-body">
+              <h3>Heartbeat &mdash; School Communication Platform</h3>
+              <p>A centralized React-based platform for staff, students, and administrators to share information, manage curriculum, and stay connected. Replaces a tangle of disconnected tools with one role-aware interface. In progress.</p>
+              <div style="margin-top:.4rem;">
+                <span class="tag">React</span>
+                <span class="tag">School Operations</span>
+                <span class="tag">In Progress</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card" href="work-apps.html" style="text-decoration:none;color:inherit;">
+            <div class="project-card-img" style="display:flex;align-items:center;justify-content:center;background:var(--bg-alt);font-family:var(--serif);font-size:1.4rem;color:var(--accent);font-style:italic;text-align:center;padding:1rem;">Rams Care<br>Data Dashboard</div>
+            <div class="project-card-body">
+              <h3>Rams Care Data Dashboard</h3>
+              <p>A live Streamlit dashboard that turns our PBIS survey data into something staff can use. Teachers and administrators can slice by grade, section, time period, and question to see how students are experiencing school.</p>
+              <div style="margin-top:.4rem;">
+                <span class="tag">Streamlit</span>
+                <span class="tag">Python</span>
+                <span class="tag">Data Viz</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="project-card" href="guess-the-teacher.html" style="text-decoration:none;color:inherit;">
+            <img src="images/guess-teacher-test.jpg" alt="Students testing Guess That Teacher" class="project-card-img">
+            <div class="project-card-body">
+              <h3>Guess That Teacher</h3>
+              <p>A lightweight web game where students identify teachers from baby photos, interview clues, and favorite things. Built to humanize staff and break down the student-teacher barrier during spirit weeks. Open source so other schools can fork it.</p>
+              <div style="margin-top:.4rem;">
+                <span class="tag">Web Game</span>
+                <span class="tag">Community</span>
+                <span class="tag">Open Source</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="link-row" style="margin-top:2rem;">
+          <a href="portfolio.html">See Everything &rarr;</a>
         </div>
       </div>
     </section>
@@ -53,19 +155,13 @@
       <div class="container">
         <p class="subtitle">Currently</p>
         <h2 style="margin-top:.4rem;">What I'm Working On</h2>
-        <p style="margin-top:.8rem;max-width:640px;">A handful of active projects at the edges of my classroom practice, hardware, multiplayer code, and classroom robotics I'm building alongside my students.</p>
+        <p style="margin-top:.8rem;max-width:640px;">A handful of active experiments at the edges of my classroom practice.</p>
 
         <div class="category-grid" style="margin-top:2rem;">
 
           <a class="category-card" href="work-special.html#remy">
             <h3>Remy the Robot</h3>
-            <p>A classroom robot on an NVIDIA Jetson Orin Nano, designed to be a shared character students can interact with, program, and extend.</p>
-            <span class="arrow">Explore &rarr;</span>
-          </a>
-
-          <a class="category-card" href="work-apps.html#rams-heartbeat">
-            <h3>Heartbeat</h3>
-            <p>A centralized communication and data platform for staff, students, and administrators to share information, manage curriculum, and stay connected.</p>
+            <p>A classroom robot on an NVIDIA Jetson Orin Nano, designed as a shared character students can interact with, program, and extend.</p>
             <span class="arrow">Explore &rarr;</span>
           </a>
 
@@ -81,15 +177,109 @@
             <span class="arrow">Explore &rarr;</span>
           </a>
 
-          <a class="category-card" href="work-student.html">
-            <h3>Guess That Teacher</h3>
-            <p>A web game where students identify teachers from baby photos, interview clues, and favorite things. Built to humanize staff and give the school something fun during spirit weeks.</p>
-            <span class="arrow">Explore &rarr;</span>
-          </a>
-
         </div>
       </div>
     </section>
+
+    <!-- ── About ── -->
+    <section id="about">
+      <div class="container">
+        <p class="subtitle">About</p>
+        <h2 style="margin-top:.4rem;">Background &amp; Philosophy</h2>
+
+        <p style="margin-top:1.2rem;">My path has wound through history, computer science, software development, special education, cross-country road trips, and now a middle school classroom where I teach 500+ students a year to think computationally, create responsibly, and ask good questions about the technology that shapes their lives.</p>
+
+        <p>I studied History and Computer Science at Hobart College, then worked as a Solutions Architect at Appway in New York, designing business-process applications and learning how to translate between engineering teams and non-technical stakeholders. After a gap year traveling 33 states and a stint at CompostNow in Raleigh, I returned to education, first as a special education instructional assistant, then as the computer science teacher at Robert Adams Middle School in Holliston, MA, where I built the full 6-8 CS curriculum from scratch.</p>
+
+        <p>I believe the best learning happens when people feel seen, challenged, and connected to something larger than themselves. Whether I'm designing a curriculum unit, building an interactive PBIS installation, or mentoring a robotics team, I'm always asking: how does this experience feel? Who is it serving? What does it make possible?</p>
+
+        <div class="link-row" style="margin-top:1.4rem;">
+          <a href="about.html">More About Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Experience at a Glance ── -->
+    <section id="experience">
+      <div class="container">
+        <p class="subtitle">Experience</p>
+        <h2 style="margin-top:.4rem;">At a Glance</h2>
+
+        <div style="margin-top:2rem;">
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <h3>Computer Science &amp; Digital Literacy Teacher</h3>
+              <span class="date">Aug 2022 &ndash; Present</span>
+            </div>
+            <p class="org">Robert Adams Middle School, Holliston, MA</p>
+            <p style="font-size:.92rem;margin-top:.4rem;">Built full grades 6-8 CS curriculum from scratch. Teach 500+ students annually across 30 sections.</p>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <h3>Instructional Assistant in Special Education</h3>
+              <span class="date">Apr 2021 &ndash; Aug 2022</span>
+            </div>
+            <p class="org">Thurston Middle School, Westwood, MA</p>
+            <p style="font-size:.92rem;margin-top:.4rem;">Implemented IEPs and supported students with disabilities and social-emotional needs.</p>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <h3>Solutions Architect</h3>
+              <span class="date">May 2017 &ndash; Jan 2018</span>
+            </div>
+            <p class="org">Appway Inc., New York, NY</p>
+            <p style="font-size:.92rem;margin-top:.4rem;">Designed business-process applications and consulted on UI design, business logic, and team coordination for enterprise clients.</p>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <h3>BA, History &amp; Computer Science</h3>
+              <span class="date">May 2017</span>
+            </div>
+            <p class="org">Hobart College, Geneva, NY</p>
+          </div>
+        </div>
+
+        <div style="margin-top:1.4rem;">
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">p5.js</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">Curriculum Design</span>
+          <span class="tag">UDL</span>
+        </div>
+
+        <div class="link-row" style="margin-top:1.6rem;">
+          <a href="cv.html">Full CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section id="contact">
+      <div class="container">
+        <p class="subtitle">Contact</p>
+        <h2 style="margin-top:.4rem;">Get in Touch</h2>
+
+        <div class="contact-body" style="margin-top:1.2rem;">
+          <p>Always happy to connect with folks working in instructional design, experience design, or ed-tech.</p>
+
+          <ul class="contact-links">
+            <li><span>Email</span> <a href="mailto:cole.perkins@gmail.com">cole.perkins@gmail.com</a></li>
+            <li><span>Phone</span> (617) 763-6777</li>
+            <li><span>GitHub</span> <a href="https://github.com/perkinscole" target="_blank" rel="noopener">github.com/perkinscole</a></li>
+            <li><span>Location</span> Sherborn, MA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
