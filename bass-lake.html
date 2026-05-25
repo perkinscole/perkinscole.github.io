@@ -41,7 +41,7 @@
       <div class="feature-title">
         <h1>Bass Lake</h1>
       </div>
-      <p class="lede">A small 2D fly fishing game. You paddle a kayak, you cast a line, you wait.</p>
+      <p class="lede">A 2D fly fishing game built in p5.js. Multiplayer over Supabase.</p>
 
       <div class="feature-links" style="margin-top:1.6rem;">
         <a href="https://perkinscole.github.io/bass-lake/" target="_blank" rel="noopener">Play it</a>
@@ -55,9 +55,9 @@
       </div>
 
       <div class="prose">
-        <p>I wanted to make something that captured the slow part of fishing. The part before the catch.</p>
+        <p>Paddle a kayak around a procedural lake. Different flies catch different fish: dry flies for bluegill and pumpkinseed, nymphs for crappie, wooly buggers for largemouth bass. False-cast to extend your line, release to drop the fly.</p>
 
-        <p>Procedural lake. Boids flocking for panfish. A small state machine for the bass. Multiplayer over Supabase. Pure p5.js, no build step.</p>
+        <p>Built in pure p5.js with no build step. The lake is generated with marching squares over a 2D noise field. Panfish use boids flocking; bass run a state machine. The fly line is a quadratic bezier with an animated control point. Multiplayer is handled through Supabase.</p>
       </div>
 
       <div class="feature-media" style="margin-top:2rem;">
