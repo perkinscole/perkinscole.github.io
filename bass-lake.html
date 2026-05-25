@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bass Lake, Cole Perkins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container--wide">
+      <a href="index.html" class="site-name">Cole Perkins</a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#work" class="active">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="cv.html">CV</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html#work">Work</a> &nbsp;/&nbsp; Bass Lake</p>
+        <p class="subtitle">Game &middot; p5.js</p>
+        <h1>Bass Lake</h1>
+        <p class="lede">A top-down fly fishing game. Paddle a kayak around a procedural multi-basin lake, watch the wildlife, and fish for bluegill, pumpkinseed, crappie, and largemouth bass.</p>
+        <div class="link-row" style="margin-top:1.4rem;">
+          <a href="https://perkinscole.github.io/bass-lake/" target="_blank" rel="noopener">Play Bass Lake</a>
+          <a href="https://github.com/perkinscole/bass-lake" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="media-row">
+          <img src="images/bass-lake-2.png" alt="Bass Lake gameplay: kayak fishing among lily pads">
+        </div>
+
+        <h2 style="margin-top:2.5rem;">The Idea</h2>
+        <p style="margin-top:.6rem;">I love fly fishing, and I wanted to make something that captured the slow, patient feel of being on the water without turning it into a checklist of mechanics. Bass Lake is a love letter to early mornings on a small pond: paddle, watch the lily pads, false-cast your line until you have the distance you want, and lay the fly down softly. Different flies catch different fish, the wrong fly gets ignored, and a hooked bass will make you work for it.</p>
+
+        <h2 style="margin-top:2.5rem;">How It Plays</h2>
+        <p style="margin-top:.6rem;">W and S paddle the kayak forward and back. A and D turn. Hold the mouse to false-cast (the fly line whips back and forth, growing further with each cycle), then release to drop the fly at your cursor. Number keys swap between Dry Fly, Nymph, and Wooly Bugger. Each fly catches a different fish: dry flies for bluegill and pumpkinseed, nymphs for crappie, wooly buggers for largemouth bass.</p>
+
+        <div class="media-row" style="margin-top:1.8rem;">
+          <img src="images/bass-lake-1.png" alt="Bass Lake menu showing lake selection and fly choices">
+        </div>
+
+        <h2 style="margin-top:2.5rem;">Under the Hood</h2>
+        <p style="margin-top:.6rem;">Pure p5.js and Canvas2D, no build step. A few details I'm proud of:</p>
+        <ul style="margin-top:.6rem;padding-left:1.2rem;max-width:680px;">
+          <li style="margin-bottom:.4rem;">The lake is generated with marching squares over a 2D noise field, with three basin centers connected by meandering river paths. Every run is a different shoreline.</li>
+          <li style="margin-bottom:.4rem;">The static world (forest, trees, lake polygon, surface patches, shore) is baked once into a downscaled image at startup. Per-frame rendering is just a sub-region blit plus animated layers, which keeps things smooth at zoom.</li>
+          <li style="margin-bottom:.4rem;">Panfish use boids flocking with a spatial hash. Bass run a small state machine, lurking near cover, then committing to a strike.</li>
+          <li style="margin-bottom:.4rem;">The fly line is a quadratic bezier with an animated control point, so it loads and unloads visibly during false casts.</li>
+          <li style="margin-bottom:.4rem;">Multiplayer is wired up through Supabase, so friends can paddle around the same lake together.</li>
+        </ul>
+
+        <h2 style="margin-top:2.5rem;">Why I Made It</h2>
+        <p style="margin-top:.6rem;">I make most of my software work in the same medium I teach: p5.js. It's the tool I want my students to feel fluent in, so I keep using it for my own projects. Bass Lake is the most technically involved thing I've built in p5, partly to prove to myself it could carry a real game, and partly because building it the long way (no engine, no framework) made me think harder about every system.</p>
+
+        <div style="margin-top:1.6rem;">
+          <span class="tag">p5.js</span>
+          <span class="tag">Canvas2D</span>
+          <span class="tag">Procedural Generation</span>
+          <span class="tag">Multiplayer</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Game Design</span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Cole Perkins. Built by hand.</p>
+      <p style="margin-top:.4rem;">Student faces have been blurred to protect privacy.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
