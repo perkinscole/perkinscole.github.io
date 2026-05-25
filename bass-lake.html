@@ -55,41 +55,13 @@
       </div>
 
       <div class="prose">
-        <p>I love fishing and I wanted to make something that captured the slow part of it. Not the catch, not the reel, the part before that. Hold the mouse to false-cast, the line whips back and forth and gets longer with each loop. Release to drop the fly. Wait. Switch to a different fly if you're getting ignored.</p>
+        <p>I wanted to make something that captured the slow part of fishing. The part before the catch.</p>
 
-        <p>Dry flies bring up bluegill and pumpkinseed. Nymphs catch crappie. Wooly buggers get the bass to look up. The wrong fly gets nothing.</p>
+        <p>Procedural lake. Boids flocking for panfish. A small state machine for the bass. Multiplayer over Supabase. Pure p5.js, no build step.</p>
       </div>
 
       <div class="feature-media" style="margin-top:2rem;">
         <img src="images/bass-lake-1.png" alt="Lake selection menu">
-      </div>
-    </section>
-
-    <section>
-      <h2>How it's built</h2>
-      <div class="prose">
-        <p>It's pure p5.js and Canvas2D, no build step. The lake shape is generated with marching squares over a 2D noise field, with three basin centers connected by river paths. Every run is a different shore.</p>
-
-        <p>The whole static world (the trees, the lake polygon, the surface texture, the shore line) gets baked once into a downscaled image at startup. Per-frame rendering is just a sub-region blit plus animated layers, which keeps the framerate stable when you zoom in close.</p>
-
-        <p>Panfish use boids flocking with a spatial hash. Bass run a small state machine: they lurk near cover, get curious, sometimes commit to a strike. The fly line itself is a quadratic bezier with an animated control point, so you can see it load and unload during the false casts.</p>
-
-        <p>Multiplayer is wired through Supabase. Friends paddle the same lake, see each other casting.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Controls</h2>
-      <div class="prose">
-        <p>
-          <em>W / S</em>  paddle forward and back<br>
-          <em>A / D</em>  turn the kayak<br>
-          <em>hold mouse</em>  false-cast (the line grows with each cycle)<br>
-          <em>release mouse</em>  deliver the fly to the cursor<br>
-          <em>click on a fish</em>  reel in<br>
-          <em>1 / 2 / 3</em>  switch fly: dry fly, nymph, wooly bugger<br>
-          <em>scroll</em>  zoom
-        </p>
       </div>
     </section>
 
