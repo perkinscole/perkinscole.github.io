@@ -156,7 +156,7 @@ section:first-of-type { padding-top: 0; }
 }
 .work-list-item {
   display: grid;
-  grid-template-columns: 5rem 1fr auto;
+  grid-template-columns: 1fr auto;
   gap: 1.4rem;
   align-items: baseline;
   padding: 1rem 0;
@@ -376,7 +376,7 @@ section:first-of-type { padding-top: 0; }
   main { margin-left: 0; width: 100%; padding: 4rem 1.6rem 4rem; }
   .menu-toggle { display: block; }
   .hero h1 { font-size: 2.4rem; }
-  .work-list-item { grid-template-columns: 3.4rem 1fr; }
+  .work-list-item { grid-template-columns: 1fr; }
   .work-list-item .descriptor { display: none; }
   .feature-media-grid { grid-template-columns: 1fr; }
   .topics { grid-template-columns: 1fr; }
