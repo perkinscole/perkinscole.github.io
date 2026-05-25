@@ -3,240 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cole Perkins, Designer &amp; Educator</title>
+  <title>Cole Perkins</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="layout">
 
-  <header>
-    <div class="container--wide">
-      <a href="index.html" class="site-name">Cole Perkins</a>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('aside.sidebar').classList.toggle('open')">menu</button>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <a href="index.html" style="color:inherit;">
+        <div class="brand-name">Cole<br>Perkins</div>
+        <div class="brand-tagline">designer, educator</div>
+      </a>
     </div>
-  </header>
+    <nav>
+      <a href="index.html" class="active">Index</a>
+      <a href="portfolio.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="sidebar-footer">
+      Sherborn, MA<br>
+      &copy; 2026
+      <span class="privacy">Student faces blurred for privacy.</span>
+    </div>
+  </aside>
 
   <main>
 
-    <!-- ── Hero ── -->
     <section class="hero">
-      <div class="container" style="display:flex;align-items:center;gap:3.5rem;flex-wrap:wrap;">
-        <div class="hero-text">
-          <p class="subtitle">Designer &middot; Educator</p>
-          <h1>Cole Perkins</h1>
-          <p class="tagline">I make things that help people learn, gather, and play.</p>
-          <p>Games, generative installations, classroom spaces, and curriculum. A middle school CS teacher and former software developer moving toward architecture and design+build.</p>
-          <div class="link-row">
-            <a href="#work">See the Work</a>
-            <a href="#contact">Get in Touch</a>
-          </div>
-        </div>
-        <div class="hero-photo">
-          <img src="images/headshot.jpg" alt="Cole Perkins headshot">
-        </div>
+      <h1>Cole Perkins</h1>
+      <div class="intro">
+        <p>I teach middle school computer science in Holliston, Massachusetts. Most of what I make starts in that room. Sometimes it leaves.</p>
+        <p>I'm currently learning my way toward architecture and design+build.</p>
       </div>
     </section>
 
-    <!-- ── Featured: Bass Lake ── -->
-    <section id="work">
-      <div class="container">
-        <p class="subtitle">Featured</p>
-        <h2 style="margin-top:.4rem;">Bass Lake</h2>
-        <p class="meta" style="margin-top:.3rem;">A 2D multiplayer fly fishing game built in p5.js</p>
-        <p style="margin-top:.8rem;max-width:700px;">Paddle a kayak around a procedural multi-basin lake, watch the wildlife, and fly fish for bluegill, pumpkinseed, crappie, and largemouth bass. False-cast until you have the distance, lay the fly down, and wait. The lake is generated with marching squares over a noise field, the fish use boids flocking and small state machines, and friends can paddle the same lake together over Supabase.</p>
+    <section>
+      <h2>Selected work</h2>
+      <div class="work-list">
 
-        <div class="media-row" style="margin-top:1.5rem;">
-          <img src="images/bass-lake-2.png" alt="Bass Lake gameplay: kayak fishing among lily pads">
-          <img src="images/bass-lake-1.png" alt="Bass Lake menu showing lake selection">
+        <a class="work-list-item" href="bass-lake.html">
+          <span class="year">2026</span>
+          <span class="title">Bass Lake</span>
+          <span class="descriptor">a fishing game</span>
+        </a>
+
+        <a class="work-list-item" href="classroom-redesign.html">
+          <span class="year">2025</span>
+          <span class="title">Classroom Redesign</span>
+          <span class="descriptor">a room, with help from its students</span>
+        </a>
+
+        <a class="work-list-item" href="portfolio.html#care-garden">
+          <span class="year">2024</span>
+          <span class="title">Care Garden</span>
+          <span class="descriptor">a lobby full of flowers</span>
+        </a>
+
+        <a class="work-list-item" href="work-curriculum.html">
+          <span class="year">2022&ndash;</span>
+          <span class="title">A CS Curriculum</span>
+          <span class="descriptor">grades 6&ndash;8, from scratch</span>
+        </a>
+
+        <a class="work-list-item" href="work-apps.html">
+          <span class="year">2023&ndash;</span>
+          <span class="title">Rams Care &amp; Heartbeat</span>
+          <span class="descriptor">data and communication for a school</span>
+        </a>
+
+        <a class="work-list-item" href="guess-the-teacher.html">
+          <span class="year">2024</span>
+          <span class="title">Guess That Teacher</span>
+          <span class="descriptor">a small game for spirit week</span>
+        </a>
+
+      </div>
+      <p class="meta" style="margin-top:1.5rem;"><a href="portfolio.html" style="font-style:italic;color:var(--text-dim);border-bottom:1px solid var(--text-faint);">More work &rarr;</a></p>
+    </section>
+
+    <section>
+      <h2>Featured</h2>
+      <div class="feature">
+        <div class="feature-title">
+          <h2 style="font-size:1.6rem;">Bass Lake</h2>
+          <span class="year italic">2026</span>
+        </div>
+        <p class="feature-descriptor">A small 2D fishing game in p5.js. You paddle a kayak, you cast a line, you wait.</p>
+
+        <div class="feature-media-grid">
+          <img src="images/bass-lake-2.png" alt="Kayak fishing among lily pads">
+          <img src="images/bass-lake-1.png" alt="Lake selection menu">
         </div>
 
-        <div style="margin-top:1rem;">
-          <span class="tag">p5.js</span>
-          <span class="tag">Game Design</span>
-          <span class="tag">Procedural Generation</span>
-          <span class="tag">Multiplayer</span>
-        </div>
+        <p>The lake is procedurally drawn with marching squares over a noise field, so the shoreline is different every time. Panfish school using boids; bass lurk near cover and decide for themselves whether to strike. Multiplayer runs through Supabase, so friends can paddle the same lake.</p>
 
-        <div class="link-row" style="margin-top:1.4rem;">
-          <a href="https://perkinscole.github.io/bass-lake/" target="_blank" rel="noopener">Play It</a>
-          <a href="bass-lake.html">Project Detail</a>
+        <div class="feature-links">
+          <a href="https://perkinscole.github.io/bass-lake/" target="_blank" rel="noopener">Play it</a>
+          <a href="bass-lake.html">Project page</a>
           <a href="https://github.com/perkinscole/bass-lake" target="_blank" rel="noopener">Source</a>
         </div>
       </div>
     </section>
 
-    <!-- ── Featured: Care Garden ── -->
     <section>
-      <div class="container">
-        <p class="subtitle">Featured</p>
-        <h2 style="margin-top:.4rem;">Care Garden</h2>
-        <p class="meta" style="margin-top:.3rem;">An interactive PBIS installation in p5.js</p>
-        <p style="margin-top:.8rem;max-width:700px;">A live, generative art installation staged in our school lobby during a week of programming around kindness. Students contributed acts of care through a kiosk, each one bloomed as a unique flower in a shared digital garden on a large display. Thousands of entries came in over five days, and the lobby became a gathering place. Code as an excuse to gather people around something kind.</p>
+      <h2>Featured</h2>
+      <div class="feature">
+        <div class="feature-title">
+          <h2 style="font-size:1.6rem;">Care Garden</h2>
+          <span class="year italic">2024</span>
+        </div>
+        <p class="feature-descriptor">A week-long generative installation in the school lobby.</p>
 
-        <div class="media-row" style="margin-top:1.5rem;">
-          <figure>
-            <img src="images/care-garden-group.jpg" alt="Cole with students by the Care Garden display">
-          </figure>
-          <figure>
-            <img src="images/care-garden-install.jpg" alt="Care Garden installation in progress">
-          </figure>
+        <div class="feature-media-grid">
+          <img src="images/care-garden-group.jpg" alt="Care Garden display in the lobby with students">
+          <img src="images/care-garden-install.jpg" alt="Care Garden installation in progress">
         </div>
 
-        <div style="margin-top:1rem;">
-          <span class="tag">p5.js</span>
-          <span class="tag">Interactive Installation</span>
-          <span class="tag">Generative Art</span>
-          <span class="tag">Community</span>
-        </div>
+        <p>Students wrote small acts of kindness on a kiosk and each one bloomed as a flower in a shared digital garden on a big screen. Thousands of flowers by Friday. The lobby became a place people lingered in.</p>
 
-        <div class="link-row" style="margin-top:1.4rem;">
-          <a href="portfolio.html">Project Detail</a>
-          <a href="https://editor.p5js.org/RAMS2023Teacher/full/CWu-kavOR" target="_blank" rel="noopener">Live Sketch</a>
+        <div class="feature-links">
+          <a href="portfolio.html#care-garden">Project page</a>
+          <a href="https://editor.p5js.org/RAMS2023Teacher/full/CWu-kavOR" target="_blank" rel="noopener">Live sketch</a>
           <a href="https://github.com/perkinscole/care-garden" target="_blank" rel="noopener">Source</a>
         </div>
       </div>
     </section>
 
-    <!-- ── Selected Work ── -->
-    <section>
-      <div class="container">
-        <p class="subtitle">More Work</p>
-        <h2 style="margin-top:.4rem;">Selected Projects</h2>
-
-        <div class="project-grid" style="margin-top:2.5rem;">
-
-          <a class="project-card" href="classroom-redesign.html" style="text-decoration:none;color:inherit;">
-            <div class="project-card-img" style="display:flex;align-items:center;justify-content:center;background:var(--bg-alt);font-family:var(--serif);font-size:1.6rem;color:var(--accent);font-style:italic;text-align:center;padding:1rem;">Classroom<br>Redesign</div>
-            <div class="project-card-body">
-              <h3>Classroom Redesign</h3>
-              <p>A student-survey-driven redesign of my CS classroom: warmer lighting, dedicated seating zones for different modes of work, and a permanent robotics arena that lets projects stay set up between classes.</p>
-              <div style="margin-top:.4rem;">
-                <span class="tag">Space Design</span>
-                <span class="tag">User Research</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="project-card" href="work-curriculum.html" style="text-decoration:none;color:inherit;">
-            <img src="images/vex-maze-1.jpg" alt="Modular VEX maze with ramps" class="project-card-img">
-            <div class="project-card-body">
-              <h3>Custom CS Curriculum</h3>
-              <p>Full grades 6&ndash;8 computer science curriculum I built from scratch. Hands-on units across robotics, AI, programming, and safety &amp; ethics, designed to work for a wide range of student experience.</p>
-              <div style="margin-top:.4rem;">
-                <span class="tag">Curriculum</span>
-                <span class="tag">Robotics</span>
-                <span class="tag">AI</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="project-card" href="work-apps.html" style="text-decoration:none;color:inherit;">
-            <div class="project-card-img" style="display:flex;align-items:center;justify-content:center;background:var(--bg-alt);font-family:var(--serif);font-size:1.3rem;color:var(--accent);font-style:italic;text-align:center;padding:1rem;">Rams Care<br>Data Dashboard</div>
-            <div class="project-card-body">
-              <h3>Rams Care Data Dashboard</h3>
-              <p>A live Streamlit dashboard that turns our PBIS survey data into something staff can actually use, sliced by grade, section, time period, and question.</p>
-              <div style="margin-top:.4rem;">
-                <span class="tag">Streamlit</span>
-                <span class="tag">Data Viz</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="project-card" href="work-apps.html#rams-heartbeat" style="text-decoration:none;color:inherit;">
-            <div class="project-card-img" style="display:flex;align-items:center;justify-content:center;background:var(--bg-alt);font-family:var(--serif);font-size:1.8rem;color:var(--accent);font-style:italic;">Heartbeat</div>
-            <div class="project-card-body">
-              <h3>Heartbeat</h3>
-              <p>A centralized React-based communication and data platform for staff, students, and administrators to share information, manage curriculum, and stay connected. In progress.</p>
-              <div style="margin-top:.4rem;">
-                <span class="tag">React</span>
-                <span class="tag">School Operations</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="project-card" href="guess-the-teacher.html" style="text-decoration:none;color:inherit;">
-            <img src="images/guess-teacher-test.jpg" alt="Students testing Guess That Teacher" class="project-card-img">
-            <div class="project-card-body">
-              <h3>Guess That Teacher</h3>
-              <p>A lightweight web game where students identify teachers from baby photos and interview clues. Built to humanize staff during spirit weeks, open source so other schools can fork it.</p>
-              <div style="margin-top:.4rem;">
-                <span class="tag">Web Game</span>
-                <span class="tag">Community</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="project-card" href="work-special.html" style="text-decoration:none;color:inherit;">
-            <div class="project-card-img" style="display:flex;align-items:center;justify-content:center;background:var(--bg-alt);font-family:var(--serif);font-size:1.4rem;color:var(--accent);font-style:italic;text-align:center;padding:1rem;">In the<br>Workshop</div>
-            <div class="project-card-body">
-              <h3>In the Workshop</h3>
-              <p>Ongoing experiments: a Jetson-powered classroom robot named Remy, 3D-printable micro:bit drones, and a multiplayer Scratch fork. Half teaching tools, half excuses to keep building.</p>
-              <div style="margin-top:.4rem;">
-                <span class="tag">In Progress</span>
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── About ── -->
-    <section id="about">
-      <div class="container">
-        <p class="subtitle">About</p>
-        <h2 style="margin-top:.4rem;">A Short Background</h2>
-
-        <p style="margin-top:1.2rem;">I'm a middle school computer science teacher at Robert Adams Middle School in Holliston, MA, where I built the full 6&ndash;8 CS curriculum from scratch and teach 500+ students a year. Before that I worked as a Solutions Architect at Appway in New York, took a gap year traveling 33 states, and spent time at CompostNow in Raleigh working on safety and operations.</p>
-
-        <p>I studied History and Computer Science at Hobart College, and the thread connecting all of it has been designing experiences that help people learn and connect, whether that's a unit, an app, an installation, or a room. I'm in the middle of a career transition toward architecture and design+build, work where physical space, craft, and human experience all sit on the same table.</p>
-
-        <p>Outside the classroom I play guitar, hike with my dog Jaco, cook with my partner Sammie, fish, and visit national parks whenever I can.</p>
-
-        <div class="link-row" style="margin-top:1.4rem;">
-          <a href="about.html">More About Me</a>
-          <a href="cv.html">CV</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Contact ── -->
-    <section id="contact">
-      <div class="container">
-        <p class="subtitle">Contact</p>
-        <h2 style="margin-top:.4rem;">Say Hello</h2>
-
-        <div class="contact-body" style="margin-top:1.2rem;">
-          <p>Always happy to talk about design, teaching, fishing, or what you're building.</p>
-
-          <ul class="contact-links">
-            <li><span>Email</span> <a href="mailto:cole.perkins@gmail.com">cole.perkins@gmail.com</a></li>
-            <li><span>Phone</span> (617) 763-6777</li>
-            <li><span>GitHub</span> <a href="https://github.com/perkinscole" target="_blank" rel="noopener">github.com/perkinscole</a></li>
-            <li><span>Location</span> Sherborn, MA</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
   </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Cole Perkins. Built by hand.</p>
-      <p style="margin-top:.4rem;">Student faces have been blurred to protect privacy.</p>
-    </div>
-  </footer>
 
 </body>
 </html>

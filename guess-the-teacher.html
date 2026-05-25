@@ -3,96 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guess That Teacher, Cole Perkins</title>
+  <title>Guess That Teacher — Cole Perkins</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="layout">
 
-  <header>
-    <div class="container--wide">
-      <a href="index.html" class="site-name">Cole Perkins</a>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html" class="active">Work</a>
-        <a href="cv.html">CV</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+  <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('aside.sidebar').classList.toggle('open')">menu</button>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <a href="index.html" style="color:inherit;">
+        <div class="brand-name">Cole<br>Perkins</div>
+        <div class="brand-tagline">designer, educator</div>
+      </a>
     </div>
-  </header>
+    <nav>
+      <a href="index.html">Index</a>
+      <a href="portfolio.html" class="active">Work</a>
+      <a href="about.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="sidebar-footer">
+      Sherborn, MA<br>
+      &copy; 2026
+      <span class="privacy">Student faces blurred for privacy.</span>
+    </div>
+  </aside>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="breadcrumb"><a href="portfolio.html">Work</a> &nbsp;/&nbsp; <a href="work-student.html">Student-Facing</a> &nbsp;/&nbsp; Guess That Teacher</p>
-        <p class="subtitle">Student-Facing Project</p>
+
+    <section>
+      <p class="crumb"><a href="portfolio.html">Work</a>  /  Guess That Teacher</p>
+      <div class="feature-title">
         <h1>Guess That Teacher</h1>
-        <p class="lede">An interactive game designed to strengthen teacher-student trust and give students a playful window into who their teachers are outside the classroom.</p>
+        <span class="year italic">2024</span>
       </div>
+      <p class="lede">A small game for spirit week. Students see a clue and try to figure out which teacher it belongs to.</p>
     </section>
 
     <section>
-      <div class="container">
+      <div class="feature-media">
+        <img src="images/guess-teacher-test.jpg" alt="Students testing Guess That Teacher in the makerspace">
+      </div>
 
-        <div class="project-block">
-          <h2>Why This Project</h2>
-          <p class="meta">Community &middot; School Culture &middot; Trust-Building</p>
-          <p>Middle school runs on relationships. The students who feel most connected to their teachers are the ones who show up, take risks, and ask for help when they need it, but those connections are hard to manufacture and easy to miss in a 500-student school. I built Guess That Teacher to give that relationship-building a shape: a low-stakes, high-fun community game that lets students learn things about teachers they'd never hear in class.</p>
-          <p>Teachers submit clues about themselves, baby photos, favorite foods, childhood pets, hidden talents, and students try to match the clues to the faces. It runs on big screens in the lobby during spirit weeks, in homerooms as a warm-up, and on student devices as a pick-up game. The goal isn't to make a perfect game; it's to create a small daily reason for teachers and students to laugh at the same thing.</p>
-        </div>
+      <div class="prose">
+        <p>Teachers submit a clue about themselves. A childhood pet, a favorite food, a hidden talent. Students see the clue and pick the teacher they think it belongs to. Right or wrong, they get a short blurb back, in the teacher's own words.</p>
 
-        <div class="project-block">
-          <h2>How It Works</h2>
-          <p>The game loads a pool of teacher profiles, each with a clue, a set of possible identities, and a correct answer. Students see a clue, pick the teacher they think matches, and get instant feedback with a short "behind the answer" blurb from the teacher themselves. Teachers can update their own profiles through a lightweight admin interface, so content refreshes across the school year without me having to be the bottleneck.</p>
-          <p>The architecture is deliberately simple: a static front-end, a small JSON data layer, and a GitHub-hosted deploy so other teachers can fork the repo and run their own version at their schools without any infrastructure to set up.</p>
-          <div>
-            <span class="tag">JavaScript</span>
-            <span class="tag">HTML / CSS</span>
-            <span class="tag">Static Web App</span>
-            <span class="tag">Open Source</span>
-            <span class="tag">School Culture</span>
-          </div>
-          <div class="links">
-            <a href="https://github.com/perkinscole" target="_blank" rel="noopener">View on GitHub &rarr;</a>
-          </div>
-        </div>
+        <p>It runs on the lobby screens during spirit week, in homerooms as a warm-up, and on student devices as a pick-up game. The first version was a Computer Club test in the makerspace. They were arguing about which teacher had the yellow parakeet within thirty seconds. That's when I knew it would work.</p>
 
-        <div class="project-block">
-          <h2>In the Classroom</h2>
-          <p>The first time I ran it was with a small group of Computer Club students helping me test version 1.0 in the Makerspace. Watching them immediately start guessing, laughing, and arguing about which teacher had the yellow parakeet as a kid was the moment I knew the project had legs. We've since rolled it out school-wide during spirit weeks and used it as the warm-up for Care Week assemblies.</p>
-          <div class="media-row">
-            <figure>
-              <img src="images/guess-teacher-test.jpg" alt="Students testing the Guess That Teacher app on the classroom display">
-              <figcaption>testing the app version 1.0</figcaption>
-            </figure>
-          </div>
-        </div>
+        <p>Architecturally it's deliberately simple: a static front-end, a small JSON file, GitHub Pages. Any teacher can fork the repo and run their own version at their school without setting up infrastructure.</p>
+      </div>
 
-        <div class="project-block">
-          <h2>What's Next</h2>
-          <p>I'm working on a v2 that adds team-based play, per-grade leaderboards, and a "teacher-of-the-week" rotation so the spotlight moves predictably through the staff. The bigger goal is to package the whole thing as a drop-in tool any school could deploy in an afternoon, Guess That Teacher as part of a small suite of community-building apps.</p>
-          <div>
-            <span class="tag">In Development</span>
-            <span class="tag">v2 Planning</span>
-          </div>
-        </div>
-
+      <div class="feature-links">
+        <a href="https://github.com/perkinscole" target="_blank" rel="noopener">Source</a>
       </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Cole Perkins. Built by hand.</p>
-      <p style="margin-top:.4rem;">Student faces have been blurred to protect privacy.</p>
-    </div>
-  </footer>
+  </main>
 
 </body>
 </html>

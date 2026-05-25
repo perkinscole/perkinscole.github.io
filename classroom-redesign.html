@@ -3,78 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classroom Redesign, Cole Perkins</title>
+  <title>Classroom Redesign — Cole Perkins</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="layout">
 
-  <header>
-    <div class="container--wide">
-      <a href="index.html" class="site-name">Cole Perkins</a>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="index.html#work" class="active">Work</a>
-        <a href="index.html#about">About</a>
-        <a href="cv.html">CV</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
+  <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('aside.sidebar').classList.toggle('open')">menu</button>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <a href="index.html" style="color:inherit;">
+        <div class="brand-name">Cole<br>Perkins</div>
+        <div class="brand-tagline">designer, educator</div>
+      </a>
     </div>
-  </header>
+    <nav>
+      <a href="index.html">Index</a>
+      <a href="portfolio.html" class="active">Work</a>
+      <a href="about.html">About</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="sidebar-footer">
+      Sherborn, MA<br>
+      &copy; 2026
+      <span class="privacy">Student faces blurred for privacy.</span>
+    </div>
+  </aside>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="breadcrumb"><a href="index.html#work">Work</a> &nbsp;/&nbsp; Classroom Redesign</p>
-        <p class="subtitle">Space Design &middot; Education</p>
-        <h1>Redesigning the Classroom</h1>
-        <p class="lede">A student-survey-driven redesign of my middle school computer science classroom, focused on lighting, collaborative seating, and a dedicated robotics arena.</p>
+
+    <section>
+      <p class="crumb"><a href="portfolio.html">Work</a>  /  Classroom Redesign</p>
+      <div class="feature-title">
+        <h1>Classroom Redesign</h1>
+        <span class="year italic">2025</span>
       </div>
+      <p class="lede">A room redesigned with help from the students who use it.</p>
     </section>
 
     <section>
-      <div class="container">
+      <div class="prose">
+        <p>I inherited a CS classroom that worked the way most middle school classrooms work. Bright fluorescents overhead, rows of identical tables, one open floor that students treated as either a hallway or an obstacle. Before I changed anything, I asked the students what they thought.</p>
 
-        <h2>Starting With the Users</h2>
-        <p style="margin-top:.6rem;">When I took over the CS classroom at Robert Adams, I inherited a space that worked the way most middle school classrooms work: fluorescent lights, rows of identical tables, and a single open floor that students treated as either a hallway or an obstacle. Before I changed anything, I wanted to know what my students actually thought about the room they spent thirty hours a week in.</p>
-        <p>I ran a short survey across all my sections asking three questions. What about this room makes it hard to focus? What about this room makes it hard to work with other people? If you could change one thing, what would it be? The answers were remarkably consistent. The lights were too bright and too uniform. There was nowhere to actually sit with a group. And the robotics work, which involved kits and motors and field pieces, was happening on the same tables as everything else, which meant cleanup ate into class time and projects rarely got finished.</p>
+        <p>The survey was three questions. What about this room makes it hard to focus. What about this room makes it hard to work with other people. If you could change one thing, what would it be. The answers were remarkably consistent across sections. The lights were too bright. There was nowhere to actually sit with a group. And the robotics work, which involved kits and motors and field pieces, was happening on the same tables as everything else, so cleanup ate into class time and projects rarely got finished.</p>
 
-        <h2 style="margin-top:2.5rem;">What I Changed</h2>
+        <p>I rebuilt the room around those answers.</p>
 
-        <h3 style="margin-top:1.4rem;">Lighting</h3>
-        <p style="margin-top:.6rem;">Swapped the harsh overhead fluorescents for warmer, dimmable task lighting in the work zones, with brighter zones near the front for direct instruction. Students consistently said the new lighting made the room feel calmer, especially during longer build sessions.</p>
+        <h2>Lighting</h2>
+        <p>Out went the fluorescents. In came warmer, dimmable task lighting over the work zones, with brighter direct lighting near the front for instruction. Students said the room felt calmer almost immediately.</p>
 
-        <h3 style="margin-top:1.4rem;">Seating Areas</h3>
-        <p style="margin-top:.6rem;">Broke up the row layout into distinct zones: a soft-seating corner for reading and small-group discussion, collaborative tables for group projects, and individual desks for focused work. Students can choose where to sit based on what they're doing, which has been a quiet but real shift in how the room feels.</p>
+        <h2>Seating zones</h2>
+        <p>The rows came apart into three zones. A soft-seating corner for reading and small-group conversation. Collaborative tables for group projects. Individual desks at the edges for focused work. Students pick where to sit based on what they're doing, and the room responds to them instead of the other way around.</p>
 
-        <h3 style="margin-top:1.4rem;">Robotics Arena</h3>
-        <p style="margin-top:.6rem;">Carved out a dedicated robotics zone with a permanent field, organized kit storage, and a workbench for assembly. Projects stay set up between classes instead of getting torn down every period, which means students can iterate over multiple sessions and actually finish what they start.</p>
+        <h2>The robotics arena</h2>
+        <p>I carved out a permanent corner for robotics: a fixed field, organized kit storage, a workbench for assembly. Projects stay set up between classes. Students iterate over days, not minutes, and they finish things.</p>
 
-        <h2 style="margin-top:2.5rem;">What I Learned</h2>
-        <p style="margin-top:.6rem;">The most useful thing about running a survey first was that it reframed the project for me. The redesign wasn't about my taste or what looked good. It was about removing friction the students could already name. Most of the changes I would have prioritized on my own (more wall storage, a different desk layout) didn't show up in the survey at all. Most of what students wanted (warmer lighting, a place to sit and talk, a robotics zone that didn't get disassembled) wasn't on my list. Listening first made the work better.</p>
-
-        <div style="margin-top:1.6rem;">
-          <span class="tag">Space Design</span>
-          <span class="tag">User Research</span>
-          <span class="tag">Learning Environments</span>
-          <span class="tag">Classroom Design</span>
-        </div>
-
+        <h2>What I learned</h2>
+        <p>The most useful thing about asking first was that it took the project out of my own taste. Most of the changes I would have prioritized on my own (more wall storage, a different desk layout) didn't appear in the survey. Most of what students asked for (warmer lights, a place to sit, a robotics zone that stayed assembled) wasn't on my own list. Listening before designing changed what got designed.</p>
       </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Cole Perkins. Built by hand.</p>
-      <p style="margin-top:.4rem;">Student faces have been blurred to protect privacy.</p>
-    </div>
-  </footer>
+  </main>
 
 </body>
 </html>
