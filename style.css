@@ -152,7 +152,8 @@ section:first-of-type { padding-top: 0; }
 /* ---------- work list (sparse) ---------- */
 .work-list {
   border-top: 1px solid var(--line);
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 .work-list-item {
   display: grid;
