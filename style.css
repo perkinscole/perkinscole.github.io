@@ -176,6 +176,8 @@ section.thick { padding: 22px 0; }
   color: #5a78b8;
   font-weight: bold;
 }
+.work-list-item.sub { padding-left: 44px; }
+.work-list-item.sub::before { left: 28px; content: "›"; }
 .work-list-item:hover {
   background: #1a2860;
 }
