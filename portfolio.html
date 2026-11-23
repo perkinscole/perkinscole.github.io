@@ -3,38 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects — Cole Perkins</title>
+  <title>Projects | Cole Perkins</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Lexend:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="layout">
+<body>
 
-  <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('aside.sidebar').classList.toggle('open')">menu</button>
-
-  <aside class="sidebar">
-    <div class="brand">
-      <a href="index.html" style="color:inherit;">
-        <div class="brand-name">Cole Perkins</div>
-      </a>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="top-in">
+      <a class="brand" href="index.html">Cole Perkins</a>
+      <nav aria-label="Main">
+        <a href="index.html">Start</a>
+        <a href="portfolio.html" class="active">Projects</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <nav>
-      <a href="index.html">Index</a>
-      <a href="portfolio.html" class="active">Projects</a>
-      <a href="games.html">Games</a>
-      <a href="about.html">About</a>
-      <a href="cv.html">CV</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="sidebar-footer">
-      Last updated April 2026<br>
-      <span class="privacy">Best viewed in any browser. Student faces blurred for privacy.</span>
-      <span class="privacy">Inspired by early 2000s computing.</span>
-    </div>
-  </aside>
+  </header>
 
-  <main>
+  <main id="main">
 
     <section class="hero">
       <h1>Projects</h1>
@@ -292,6 +284,13 @@
     </section>
 
   </main>
+
+  <footer class="site-footer">
+    <div class="foot-in">
+      <span>Student faces are blurred for privacy.</span>
+      <span><a href="mailto:cole.perkins@gmail.com">Email</a> &middot; <a href="https://github.com/perkinscole" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </footer>
 
 </body>
 </html>

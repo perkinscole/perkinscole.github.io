@@ -3,38 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV — Cole Perkins</title>
+  <title>CV | Cole Perkins</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Lexend:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="layout">
+<body>
 
-  <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('aside.sidebar').classList.toggle('open')">menu</button>
-
-  <aside class="sidebar">
-    <div class="brand">
-      <a href="index.html" style="color:inherit;">
-        <div class="brand-name">Cole Perkins</div>
-      </a>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="top-in">
+      <a class="brand" href="index.html">Cole Perkins</a>
+      <nav aria-label="Main">
+        <a href="index.html">Start</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+        <a href="cv.html" class="active">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <nav>
-      <a href="index.html">Index</a>
-      <a href="portfolio.html">Projects</a>
-      <a href="games.html">Games</a>
-      <a href="about.html">About</a>
-      <a href="cv.html" class="active">CV</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="sidebar-footer">
-      Last updated April 2026<br>
-      <span class="privacy">Best viewed in any browser. Student faces blurred for privacy.</span>
-      <span class="privacy">Inspired by early 2000s computing.</span>
-    </div>
-  </aside>
+  </header>
 
-  <main>
+  <main id="main">
 
     <section class="hero">
       <h1>Cole A. Perkins</h1>
@@ -48,7 +40,7 @@
         <div class="cv-entry">
           <div class="cv-entry-line">
             <h3>Computer Science &amp; Digital Literacy Teacher, Team Leader</h3>
-            <span class="date">Aug 2022 — Present</span>
+            <span class="date">Aug 2022 to Present</span>
           </div>
           <p class="org">Robert Adams Middle School, Holliston, MA  ·  Professional Status Teacher</p>
           <ul>
@@ -64,7 +56,7 @@
         <div class="cv-entry">
           <div class="cv-entry-line">
             <h3>Instructional Assistant, Special Education</h3>
-            <span class="date">Apr 2021 — Aug 2022</span>
+            <span class="date">Apr 2021 to Aug 2022</span>
           </div>
           <p class="org">Thurston Middle School, Westwood, MA</p>
           <ul>
@@ -76,7 +68,7 @@
         <div class="cv-entry">
           <div class="cv-entry-line">
             <h3>Onsite Operations</h3>
-            <span class="date">Mar 2019 — Mar 2020</span>
+            <span class="date">Mar 2019 to Mar 2020</span>
           </div>
           <p class="org">CompostNow Inc., Raleigh, NC</p>
           <ul>
@@ -88,7 +80,7 @@
         <div class="cv-entry">
           <div class="cv-entry-line">
             <h3>Solutions Architect</h3>
-            <span class="date">May 2017 — Jan 2018</span>
+            <span class="date">May 2017 to Jan 2018</span>
           </div>
           <p class="org">Appway Inc., New York, NY</p>
           <ul>
@@ -100,7 +92,7 @@
         <div class="cv-entry">
           <div class="cv-entry-line">
             <h3>Intern, Professional Services</h3>
-            <span class="date">Jun 2016 — Aug 2016</span>
+            <span class="date">Jun 2016 to Aug 2016</span>
           </div>
           <p class="org">Appway Inc., New York, NY</p>
           <ul>
@@ -131,14 +123,14 @@
         <div class="cv-entry">
           <div class="cv-entry-line">
             <h3>Gap Year, US &amp; Europe</h3>
-            <span class="date">Jan 2018 — Jan 2019</span>
+            <span class="date">Jan 2018 to Jan 2019</span>
           </div>
           <p style="font-size:.97rem;">Drove across the country, stayed in 33 states.</p>
         </div>
         <div class="cv-entry">
           <div class="cv-entry-line">
             <h3>Radio Host, WHWS 105.7</h3>
-            <span class="date">Sep 2013 — May 2017</span>
+            <span class="date">Sep 2013 to May 2017</span>
           </div>
           <p style="font-size:.97rem;">Weekly live broadcast.</p>
         </div>
@@ -146,6 +138,13 @@
     </section>
 
   </main>
+
+  <footer class="site-footer">
+    <div class="foot-in">
+      <span>Student faces are blurred for privacy.</span>
+      <span><a href="mailto:cole.perkins@gmail.com">Email</a> &middot; <a href="https://github.com/perkinscole" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </footer>
 
 </body>
 </html>

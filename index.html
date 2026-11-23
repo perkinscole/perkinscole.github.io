@@ -4,131 +4,362 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cole Perkins</title>
+  <meta name="description" content="Cole Perkins: educator, developer, builder. Learn about my work in short steps.">
+  <script>document.documentElement.className += ' js';</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Lexend:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="layout">
+<body>
 
-  <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('aside.sidebar').classList.toggle('open')">menu</button>
-
-  <aside class="sidebar">
-    <div class="brand">
-      <a href="index.html" style="color:inherit;">
-        <div class="brand-name">Cole Perkins</div>
-      </a>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="top-in">
+      <a class="brand" href="index.html">Cole Perkins</a>
+      <nav aria-label="Main">
+        <a href="index.html" class="active">Start</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <nav>
-      <a href="index.html" class="active">Index</a>
-      <a href="portfolio.html">Projects</a>
-      <a href="games.html">Games</a>
-      <a href="about.html">About</a>
-      <a href="cv.html">CV</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="sidebar-footer">
-      Last updated April 2026<br>
-      <span class="privacy">Best viewed in any browser. Student faces blurred for privacy.</span>
-      <span class="privacy">Inspired by early 2000s computing.</span>
+  </header>
+
+  <div class="lesson-bar" id="lesson-bar" hidden>
+    <div class="lesson-bar-in">
+      <button class="exit" id="lesson-exit" type="button" aria-label="Back to all topics">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg>
+      </button>
+      <div class="track" role="progressbar" aria-label="Lesson progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="lesson-track"><div class="fill" id="lesson-fill"></div></div>
+      <span class="count" id="lesson-count"></span>
     </div>
-  </aside>
+  </div>
 
-  <main>
+  <main id="main" class="learn">
 
-    <section class="hero">
-      <div class="intro">
-        <p>Educator, developer, builder. Middle school computer science teacher in Holliston, Massachusetts with a background in software.</p>
+    <!-- ── Start: pick a topic ── -->
+    <section class="chooser" id="chooser">
+      <p class="eyebrow">Educator, developer, builder</p>
+      <h1>Learn about Cole Perkins</h1>
+      <p class="lede">I teach middle school computer science and build the software my classes run on. This site works the way my lessons do: short steps, one idea at a time.</p>
+
+      <p class="ask">What do you want to learn about me?</p>
+      <div class="paths">
+        <a class="path p-build" href="#build" data-path="build">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></span>
+          <span class="name">What I build</span>
+          <span class="what">Software for classrooms, and a few things for fun.</span>
+          <span class="len" data-len="6 steps">6 steps</span>
+        </a>
+        <a class="path p-teach" href="#teach" data-path="teach">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.5"/></svg></span>
+          <span class="name">How I teach</span>
+          <span class="what">500+ students a year and a curriculum built from scratch.</span>
+          <span class="len" data-len="6 steps">6 steps</span>
+        </a>
+        <a class="path p-games" href="#games" data-path="games">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="5"/><path d="M7 10v4M5 12h4"/><path d="M15.5 11h.01M18 13h.01"/></svg></span>
+          <span class="name">The games</span>
+          <span class="what">Lil Bro Games and what I'm making.</span>
+          <span class="len" data-len="4 steps">4 steps</span>
+        </a>
+        <a class="path p-short" href="#short" data-path="short">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>
+          <span class="name">The short version</span>
+          <span class="what">My background in six lines.</span>
+          <span class="len" data-len="2 steps">2 steps</span>
+        </a>
       </div>
+
+      <p class="skip-links">In a hurry? Go straight to <a href="portfolio.html">projects</a>, the <a href="cv.html">CV</a> or <a href="contact.html">contact</a>.</p>
     </section>
 
-    <section>
-      <h2>Selected projects</h2>
-      <div class="work-list">
+    <!-- ── Lesson: What I build ── -->
+    <article class="lesson p-build" id="build" data-title="What I build">
+      <p class="eyebrow">What I build</p>
 
-        <a class="work-list-item" href="https://mscodelab.org" target="_blank" rel="noopener">
-          <span class="title">MS Code Lab</span>
-          <span class="descriptor">seven-course CS platform for grades 6 to 8</span>
-        </a>
-
-        <a class="work-list-item" href="https://curriclio.app" target="_blank" rel="noopener">
-          <span class="title">Curriclio</span>
-          <span class="descriptor">full-stack curriculum platform for districts</span>
-        </a>
-
-        <a class="work-list-item" href="https://school-heartbeat.vercel.app" target="_blank" rel="noopener">
-          <span class="title">Heartbeat</span>
-          <span class="descriptor">school communication and operations hub</span>
-        </a>
-
-        <a class="work-list-item" href="bass-lake.html">
-          <span class="title">Bass Lake</span>
-          <span class="descriptor">2D multiplayer game, p5.js + Supabase</span>
-        </a>
-
-        <a class="work-list-item" href="https://perkinscole.github.io/hab-dashboard/" target="_blank" rel="noopener">
-          <span class="title">HAB Dashboard</span>
-          <span class="descriptor">algal bloom prediction model</span>
-        </a>
-
-        <a class="work-list-item" href="https://perkinscole.github.io/satellite-visualizer/" target="_blank" rel="noopener">
-          <span class="title">Satellite Visualizer</span>
-          <span class="descriptor">real-time orbital tracker, 3D viz</span>
-        </a>
-
-        <a class="work-list-item" href="https://perkinscole.github.io/neural-network-site/" target="_blank" rel="noopener">
-          <span class="title">Neural Network Explainer</span>
-          <span class="descriptor">interactive walkthrough of neural nets</span>
-        </a>
-
-        <a class="work-list-item" href="portfolio.html#care-garden">
-          <span class="title">Care Garden</span>
-          <span class="descriptor">interactive school installation, p5.js</span>
-        </a>
-
+      <div class="step">
+        <h2 tabindex="-1">I build software for classrooms.</h2>
+        <p>I'm a middle school computer science teacher with a software background. When a tool I needed didn't exist, I built it.</p>
+        <p><strong>Most of my projects started as something my own students needed.</strong></p>
       </div>
-      <p class="meta" style="margin-top:1.5rem;"><a href="portfolio.html" style="font-style:italic;color:var(--text-dim);border-bottom:1px solid var(--text-faint);">All projects &rarr;</a></p>
-    </section>
 
-    <section>
-      <div class="feature">
-        <div class="feature-title">
-          <h2 style="font-size:1.6rem;">Bass Lake</h2>
+      <div class="step">
+        <h2 tabindex="-1">The biggest one is MS Code Lab.</h2>
+        <p>MS Code Lab is a platform of computer science courses for grades 6 to 8. Each course is a full unit with its own lessons, checks, projects and game.</p>
+        <div class="quiz">
+          <p class="q">How many full courses run on it?</p>
+          <div class="options">
+            <button class="option" type="button">Two</button>
+            <button class="option" type="button">Four</button>
+            <button class="option" type="button" data-correct>Seven</button>
+          </div>
+          <div class="feedback" aria-live="polite">
+            <p><span class="verdict"></span> Seven courses: game programming, circuits, cybersecurity, block coding, phone apps, robotics and networking. <strong>More than 200 lessons</strong> share one teacher account.</p>
+          </div>
         </div>
-        <p class="feature-descriptor">A small 2D fishing game in p5.js.</p>
+        <img src="images/mscodelab-map.jpg" width="1400" height="860" loading="lazy" alt="The Pixel Trail course map: a blocky landscape where each student's character stands at the lesson they have reached.">
+        <p class="cap">Pixel Trail, the JavaScript game programming course. <a href="https://mscodelab.org" target="_blank" rel="noopener">Visit mscodelab.org</a></p>
+      </div>
 
-        <div class="feature-media-grid">
-          <img src="images/bass-lake-1.png" alt="Kayak fishing among lily pads">
-          <img src="images/bass-lake-menu.png" alt="Lake selection menu">
-        </div>
+      <div class="step">
+        <h2 tabindex="-1">It is a product, not a set of slides.</h2>
+        <p>Every course has a gradebook that fills itself in, a help queue for stuck students, a screen to project for the class, and a report of the steps students found confusing.</p>
+        <p><strong>No student email. No ads. No trackers.</strong> Each school's data is walled off in the database itself.</p>
+        <img src="images/mscodelab-teacher-screen.jpg" width="1400" height="875" loading="lazy" alt="The class screen a teacher projects: a race track through today's lesson, a class goal, a countdown and recent wins. No grades are shown.">
+        <p class="cap">The screen for the board. It never shows grades.</p>
+      </div>
 
-        <div class="feature-links">
-          <a href="https://perkinscole.github.io/bass-lake/" target="_blank" rel="noopener">Play it</a>
-          <a href="bass-lake.html">More</a>
+      <div class="step">
+        <h2 tabindex="-1">I also build tools for schools.</h2>
+        <p>Teachers and administrators have their own problems. These are the ones I've built for.</p>
+        <div class="work-list">
+          <a class="work-list-item" href="https://curriclio.app" target="_blank" rel="noopener">
+            <span class="title">Curriclio</span>
+            <span class="descriptor">Districts collect unit plans through a draft, submit, review, approve workflow. Next.js and Postgres.</span>
+          </a>
+          <a class="work-list-item" href="https://school-heartbeat.vercel.app" target="_blank" rel="noopener">
+            <span class="title">Heartbeat</span>
+            <span class="descriptor">A school communication and operations hub.</span>
+          </a>
+          <a class="work-list-item" href="work-apps.html">
+            <span class="title">Rams Care Dashboard</span>
+            <span class="descriptor">Staff explore PBIS survey data by grade, section and question. Streamlit and Python.</span>
+          </a>
         </div>
       </div>
-    </section>
 
-    <section>
-      <div class="feature">
-        <div class="feature-title">
-          <h2 style="font-size:1.6rem;">Care Garden</h2>
+      <div class="step">
+        <h2 tabindex="-1">Not everything is for school.</h2>
+        <p>Bass Lake is a 2D multiplayer fly fishing game I wrote in p5.js. You paddle a kayak around a lake that is different every time you play.</p>
+        <div class="quiz">
+          <p class="q">How does the lake get a new shoreline each time?</p>
+          <div class="options">
+            <button class="option" type="button">A set of hand-drawn maps, picked at random</button>
+            <button class="option" type="button" data-correct>Marching squares over a noise field</button>
+            <button class="option" type="button">A traced photo of a real lake</button>
+          </div>
+          <div class="feedback" aria-live="polite">
+            <p><span class="verdict"></span> The lake is generated with marching squares over 2D noise. Panfish school with a boids algorithm, bass run a state machine, and multiplayer goes through Supabase. <strong>No game engine.</strong></p>
+          </div>
         </div>
-        <p class="feature-descriptor">A week-long generative installation in the school lobby.</p>
+        <img src="images/bass-lake-1.png" width="1554" height="874" loading="lazy" alt="Bass Lake: a kayak on green water beside lily pads and a shoreline.">
+        <p class="cap"><a href="https://perkinscole.github.io/bass-lake/" target="_blank" rel="noopener">Play Bass Lake</a></p>
+      </div>
 
-        <div class="feature-media-grid">
-          <img src="images/care-garden-group.jpg" alt="Care Garden display in the lobby with students">
-          <img src="images/care-garden-install.jpg" alt="Care Garden installation in progress">
-        </div>
-
-        <div class="feature-links">
-          <a href="https://perkinscole.github.io/care-garden/" target="_blank" rel="noopener">Visit the garden</a>
-          <a href="portfolio.html#care-garden">More</a>
+      <div class="step">
+        <h2 tabindex="-1">I like live data.</h2>
+        <p>A few projects that pull real data and make it readable.</p>
+        <div class="work-list">
+          <a class="work-list-item" href="https://perkinscole.github.io/hab-dashboard/" target="_blank" rel="noopener">
+            <span class="title">HAB Dashboard</span>
+            <span class="descriptor">Live algal bloom risk for the Charles River, from USGS and National Weather Service data.</span>
+          </a>
+          <a class="work-list-item" href="https://perkinscole.github.io/satellite-visualizer/" target="_blank" rel="noopener">
+            <span class="title">Satellite Visualizer</span>
+            <span class="descriptor">A real-time tracker of satellites in orbit, in 3D.</span>
+          </a>
+          <a class="work-list-item" href="https://perkinscole.github.io/neural-network-site/" target="_blank" rel="noopener">
+            <span class="title">Neural Network Explainer</span>
+            <span class="descriptor">An interactive walkthrough of how neural networks work.</span>
+          </a>
         </div>
       </div>
-    </section>
+
+      <div class="step wrap-up">
+        <h2 tabindex="-1">That's what I build.</h2>
+        <p>I work in JavaScript, TypeScript, Python, React, Next.js, Postgres, p5.js and Three.js.</p>
+        <div class="btn-row">
+          <a class="btn" href="portfolio.html">See every project</a>
+          <a class="btn ghost" href="#teach">Next: how I teach</a>
+          <a class="btn ghost" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── Lesson: How I teach ── -->
+    <article class="lesson p-teach" id="teach" data-title="How I teach">
+      <p class="eyebrow">How I teach</p>
+
+      <div class="step">
+        <h2 tabindex="-1">I teach computer science to grades 6 to 8.</h2>
+        <p>I'm the computer science teacher at Robert Adams Middle School in Holliston, Massachusetts.</p>
+        <div class="quiz">
+          <p class="q">How many students do I teach in a year?</p>
+          <div class="options">
+            <button class="option" type="button">About 120</button>
+            <button class="option" type="button">About 250</button>
+            <button class="option" type="button" data-correct>More than 500</button>
+          </div>
+          <div class="feedback" aria-live="polite">
+            <p><span class="verdict"></span> More than 500 students a year, across 30 sections. <strong>That scale shapes everything I design.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <h2 tabindex="-1">I built the curriculum from scratch.</h2>
+        <p>I wrote the full computer science curriculum for grades 6 to 8. It covers <strong>robotics, AI, programming, and safety and ethics.</strong></p>
+        <div class="stats">
+          <div class="stat"><b>500+</b><span>students a year</span></div>
+          <div class="stat"><b>30</b><span>sections a year</span></div>
+          <div class="stat"><b>3</b><span>grade levels</span></div>
+        </div>
+        <p class="cap"><a href="work-curriculum.html">See the curriculum</a></p>
+      </div>
+
+      <div class="step">
+        <h2 tabindex="-1">Four rules I design lessons by.</h2>
+        <p>A student with an IEP, a student still learning English and a student racing ahead should all be able to work in the same room, on the same lesson.</p>
+        <ol class="rules">
+          <li><b>One short instruction at a time.</b><span>Every step is a single, plainly worded task.</span></li>
+          <li><b>Support that fades.</b><span>Early lessons show exactly what to add. Later ones set a goal and keep a hint one tap away.</span></li>
+          <li><b>Choice without chaos.</b><span>Students pick projects by interest, and the class still moves through the same big ideas.</span></li>
+          <li><b>Points never come from grades.</b><span>Rewards follow progress and helping others, so nobody can see who is behind.</span></li>
+        </ol>
+      </div>
+
+      <div class="step">
+        <h2 tabindex="-1">I redesigned my classroom.</h2>
+        <p>The room had fluorescent lights and rows of identical tables.</p>
+        <div class="quiz">
+          <p class="q">What did I do before changing anything?</p>
+          <div class="options">
+            <button class="option" type="button">Asked for a furniture budget</button>
+            <button class="option" type="button" data-correct>Surveyed my students</button>
+            <button class="option" type="button">Sketched a new floor plan</button>
+          </div>
+          <div class="feedback" aria-live="polite">
+            <p><span class="verdict"></span> I asked three questions: what makes the room hard to focus in, what makes group work hard, and what would you change. The answers were consistent, so I put in <strong>warmer lighting, three seating zones and a permanent robotics area.</strong></p>
+          </div>
+        </div>
+        <div class="pair">
+          <img src="images/class-old-1-web.jpg" width="1400" height="1050" loading="lazy" alt="The classroom before: bright overhead lights and rows of tables.">
+          <img src="images/robotics-area-web.jpg" width="1400" height="1050" loading="lazy" alt="The classroom after: a permanent robotics field with organized kit storage behind it.">
+        </div>
+        <p class="cap">Before and after. <a href="classroom-redesign.html">See the redesign</a></p>
+      </div>
+
+      <div class="step">
+        <h2 tabindex="-1">I built an installation for the lobby.</h2>
+        <p>For our school's Care Week I made Care Garden in p5.js. Students submitted acts of kindness at a kiosk, and each one grew a flower in a shared garden on a big screen.</p>
+        <p><strong>Thousands of submissions came in over one week.</strong></p>
+        <img src="images/care-garden-group.jpg" loading="lazy" alt="Cole with students beside the Care Garden display in the school lobby.">
+        <p class="cap"><a href="https://perkinscole.github.io/care-garden/" target="_blank" rel="noopener">Visit the garden</a></p>
+      </div>
+
+      <div class="step">
+        <h2 tabindex="-1">I lead outside my own room.</h2>
+        <p>As <strong>Team Leader</strong> I organize and lead meetings, carry communication between faculty and administration, and oversee staff initiatives.</p>
+        <p>I run the Computer Club and the Camera Club, and I wrote a licensure guide for para-educators. Before this job I was a special education instructional assistant.</p>
+      </div>
+
+      <div class="step wrap-up">
+        <h2 tabindex="-1">That's how I teach.</h2>
+        <p>The software I build comes out of this work.</p>
+        <div class="btn-row">
+          <a class="btn" href="#build">Next: what I build</a>
+          <a class="btn ghost" href="cv.html">Read the CV</a>
+          <a class="btn ghost" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── Lesson: The games ── -->
+    <article class="lesson p-games" id="games" data-title="The games">
+      <p class="eyebrow">The games</p>
+
+      <div class="step">
+        <h2 tabindex="-1">Lil Bro Games is my game studio.</h2>
+        <p>It's named for my brother and me.</p>
+        <div class="pair">
+          <img src="images/lilbro-games.webp" loading="lazy" alt="The Lil Bro Games logo: a small cat wiring up the brain of a big cat in a Big Bro shirt.">
+          <img src="images/me-and-bro.jpg" loading="lazy" alt="Cole and his brother as kids in an airport.">
+        </div>
+      </div>
+
+      <div class="step">
+        <h2 tabindex="-1">Bass Lake is a fly fishing game.</h2>
+        <p>You paddle a kayak, false-cast to work out line, and drop a fly where the fish are. There are three flies to choose from.</p>
+        <div class="quiz">
+          <p class="q">What happens if you cast the wrong fly?</p>
+          <div class="options">
+            <button class="option" type="button">You lose a life</button>
+            <button class="option" type="button" data-correct>The fish ignore you</button>
+            <button class="option" type="button">The game swaps it for the right one</button>
+          </div>
+          <div class="feedback" aria-live="polite">
+            <p><span class="verdict"></span> Dry flies bring up bluegill and pumpkinseed. Nymphs catch crappie. Wooly buggers get the bass. <strong>The wrong fly gets nothing.</strong></p>
+          </div>
+        </div>
+        <img src="images/bass-lake-menu.png" loading="lazy" alt="The Bass Lake menu: two lakes and three flies, each matched to a fish.">
+        <p class="cap"><a href="https://perkinscole.github.io/bass-lake/" target="_blank" rel="noopener">Play Bass Lake</a></p>
+      </div>
+
+      <div class="step">
+        <h2 tabindex="-1">Two more are in progress.</h2>
+        <p><strong>Everybody Golfs</strong> is golf like real life. You're bad and it's too hard.</p>
+        <p><strong>Rat Plague</strong> is still early.</p>
+      </div>
+
+      <div class="step">
+        <h2 tabindex="-1">What I play.</h2>
+        <p>RPGs like <strong>Fallout</strong> and <strong>Oblivion</strong>. Strategy games like <strong>Civilization</strong>.</p>
+      </div>
+
+      <div class="step wrap-up">
+        <h2 tabindex="-1">That's the games.</h2>
+        <div class="btn-row">
+          <a class="btn" href="games.html">Games page</a>
+          <a class="btn ghost" href="#build">Next: what I build</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── Lesson: The short version ── -->
+    <article class="lesson p-short" id="short" data-title="The short version">
+      <p class="eyebrow">The short version</p>
+
+      <div class="step">
+        <h2 tabindex="-1">My background in six lines.</h2>
+        <ul class="timeline">
+          <li><span class="yr">2017</span><span><b>BA in History and Computer Science.</b> Hobart College.</span></li>
+          <li><span class="yr">2017</span><span><b>Solutions Architect at Appway.</b> Business process software for enterprise clients, in New York.</span></li>
+          <li><span class="yr">2018</span><span><b>A year on the road.</b> 33 states.</span></li>
+          <li><span class="yr">2019</span><span><b>Operations at CompostNow.</b> Raleigh, North Carolina.</span></li>
+          <li><span class="yr">2021</span><span><b>Special education instructional assistant.</b> Thurston Middle School.</span></li>
+          <li><span class="yr">2022</span><span><b>Computer science teacher and team leader.</b> Robert Adams Middle School, to now.</span></li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <h2 tabindex="-1">Outside of work.</h2>
+        <p>Guitar, fishing, hiking with my dog Jaco, cooking with my partner Sammie, and national parks.</p>
+        <img src="images/perkins.jpg" loading="lazy" alt="Cole Perkins, smiling, with the London skyline behind him.">
+      </div>
+
+      <div class="step wrap-up">
+        <h2 tabindex="-1">That's the short version.</h2>
+        <div class="btn-row">
+          <a class="btn" href="cv.html">Read the full CV</a>
+          <a class="btn ghost" href="#build">What I build</a>
+          <a class="btn ghost" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </article>
 
   </main>
 
+  <footer class="site-footer">
+    <div class="foot-in">
+      <span>Student faces are blurred for privacy.</span>
+      <span><a href="mailto:cole.perkins@gmail.com">Email</a> &middot; <a href="https://github.com/perkinscole" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </footer>
+
+  <script src="learn.js"></script>
 </body>
 </html>
