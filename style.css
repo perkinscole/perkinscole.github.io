@@ -125,6 +125,7 @@ section > h2 { margin-bottom: 14px; scroll-margin-top: 20px; }
 /* ---------- features, media, prose ---------- */
 .feature-title { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
 .feature-descriptor { color: var(--ink-2); font-size: 1.1rem; margin-bottom: 12px; max-width: 58ch; }
+h3.version { margin: 34px 0 8px; }
 .feature-media { margin: 16px 0; }
 .feature-media img, .feature-media video,
 .feature-media-grid img, .feature-media-grid video { width: 100%; border-radius: var(--r); border: 2px solid var(--line); background: var(--panel); }
